@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pasta to CFG</title>
+    <meta charset="utf-8" />
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <h1>Pasta to CFG</h1>
+    <p>
+      This page converts long texts into CFG files compatible with games such as
+      Counter-Strike: Global Offensive. These CFG files create a command alias
+      which, when called repeatedly (e.g. with a keybind set with
+      <code>bind &lt;key&gt; &lt;alias&gt;</code>), outputs the entire text into
+      the game's chat, in chunks. <strong>Note:</strong> if the command is
+      called too fast, the server will most likely throttle the message rate,
+      resulting in some chunks going missing.
+    </p>
+    <textarea id="text-input" style="box-sizing: border-box; width: 40rem; height: 20rem; max-width: 100%;">To be fair, you have to have a very high IQ to understand Rick and Morty. The humor is extremely subtle, and without a solid grasp of theoretical physics most of the jokes will go over a typical viewer's head.</textarea><br/>
+    <input id="file-input" type="file" accept=".txt" style="display: none;" />
+    <button id="file-button">Upload a text file</button>
+    Command name: <input id="name-input" type="text" value="pasta" />
+    <button id="download-button">Convert and download</button><br/>
+    <textarea id="text-output" readonly="true" style="box-sizing: border-box; width: 40rem; height: 20rem; max-width: 100%;"></textarea>
+  </body>
+</html>
