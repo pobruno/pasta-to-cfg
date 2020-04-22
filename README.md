@@ -8,7 +8,8 @@ be used to output the entire text into the in-game chat in several messages.
 
 ## Usage
 
-1. Enter your text in the first text area
+1. Enter your text in the first text area (alternatively use the button below to
+   use text from a file on your device)
 2. Set the command name you wish to use in the corresponding text field
 3. Copy the text in the second text area and save it to a file inside your
    game's `cfg` directory
