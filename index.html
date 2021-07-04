@@ -18,9 +18,10 @@
       resulting in some chunks going missing.
     </p>
     <textarea id="text-input" style="box-sizing: border-box; width: 40rem; height: 20rem; max-width: 100%;">To be fair, you have to have a very high IQ to understand Rick and Morty. The humor is extremely subtle, and without a solid grasp of theoretical physics most of the jokes will go over a typical viewer's head.</textarea><br/>
-    <input id="file-input" type="file" accept=".txt" style="display: none;" />
+    <input id="file-input" type="file" accept=".txt" hidden />
     <button id="file-button">Upload a text file</button>
-    Command name: <input id="name-input" type="text" value="pasta" />
+    <label>Command name: <input id="name-input" type="text" value="pasta" /></label>
+    <label>Team chat <input id="team-input" type="checkbox" /></label>
     <button id="download-button" disabled="true" title="Not available yet">Convert and download</button><br/>
     <textarea id="text-output" readonly="true" style="box-sizing: border-box; width: 40rem; height: 20rem; max-width: 100%;"></textarea>
     <footer>

@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const fileIn = document.getElementById('file-input');
   const chooseFile = document.getElementById('file-button');
   const nameIn = document.getElementById('name-input');
+  const teamIn = document.getElementById('team-input');
 
   const wordRegex = /\s*(\S{1,127})\s*/g;
 
@@ -43,11 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = nameIn.value;
     const commands = [];
     let index = 0;
+    const sayCommand = teamIn.checked ? 'say_team' : 'say';
     lines.forEach(l => {
       if (index !== lines.length - 1)
-        commands.push(`alias ${name}_line${index} "alias ${name} ${name}_line${++index}; say ${l}"`);
+        commands.push(`alias ${name}_line${index} "alias ${name} ${name}_line${++index}; ${sayCommand} ${l}"`);
       else
-        commands.push(`alias ${name}_line${index} "alias ${name} ${name}_line0; say ${l}"`);
+        commands.push(`alias ${name}_line${index} "alias ${name} ${name}_line0; ${sayCommand} ${l}"`);
     });
     commands.push(`alias ${name} ${name}_line0`);
     textOut.value = commands.join('\n');
@@ -55,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   text.addEventListener('input', rebuild);
   nameIn.addEventListener('input', rebuild);
+  teamIn.addEventListener('input', rebuild);
 
   fileIn.addEventListener('change', e => {
     if (!e.target.files) return;
